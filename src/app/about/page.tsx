@@ -1,10 +1,10 @@
-export default function Home() {
+export default function About() {
   return (
     <div className="bg-lightGray min-h-screen">
       <section className="p-8 text-center">
-        <h1 className="text-4xl text-darkBlue">Welcome to the Home Page</h1>
+        <h1 className="text-4xl text-darkBlue">Welcome to the About Page</h1>
         <p className="mt-4 text-lightBlue">
-          This is the first section of the home page.
+          This is the first section of the about page.
         </p>
       </section>
       <section className="p-8 text-center bg-pink">
