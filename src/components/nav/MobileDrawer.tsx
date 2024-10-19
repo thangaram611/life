@@ -1,8 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FaBars, FaXmark } from "react-icons/fa6";
 import NavLinks from "./NavLinks";
 
 export default function MobileDrawer({
@@ -27,17 +26,17 @@ export default function MobileDrawer({
 
   return (
     <>
-      <button className="p-2 mr-2" onClick={toggleOpen}>
-        <FontAwesomeIcon className="text-4xl" icon={faBars} />
+      <button className="p-2" onClick={toggleOpen}>
+        <FaBars className="scale-[1.7]" />
       </button>
       <div
-        className={`fixed top-0 right-0 h-screen w-screen bg-white text-black transition-transform duration-300 transform z-50 ${
+        className={`fixed top-0 right-0 h-screen w-screen backdrop-blur-3xl transition-transform duration-300 transform z-50 ${
           isOpen ? "translate-y-0" : "-translate-y-full"
         }`}
       >
         <div className="flex flex-col w-full h-full items-center">
           <button className="self-end p-3 m-4" onClick={toggleOpen}>
-            <FontAwesomeIcon className="text-5xl" icon={faXmark} />
+            <FaXmark className="scale-[1.7]" />
           </button>
           <NavLinks toggle={toggleOpen} />
         </div>
