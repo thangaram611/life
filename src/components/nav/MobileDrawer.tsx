@@ -30,11 +30,11 @@ export default function MobileDrawer({
         <FaBars className="scale-[1.7]" />
       </button>
       <div
-        className={`fixed top-0 right-0 h-screen w-screen backdrop-blur-3xl transition-transform duration-300 transform z-50 ${
+        className={`fixed top-0 right-0 h-screen w-screen transition-transform duration-300 transform z-100 ${
           isOpen ? "translate-y-0" : "-translate-y-full"
         }`}
       >
-        <div className="flex flex-col w-full h-full items-center">
+        <div className="flex flex-col w-full h-full items-center backdrop-blur-xl">
           <button className="self-end p-3 m-4" onClick={toggleOpen}>
             <FaXmark className="scale-[1.7]" />
           </button>
