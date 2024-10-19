@@ -27,7 +27,7 @@ export default function MobileDrawer({
 
   return (
     <>
-      <button className="absolute right-2 top-2 p-2" onClick={toggleOpen}>
+      <button className="p-2 mr-2" onClick={toggleOpen}>
         <FontAwesomeIcon className="text-4xl" icon={faBars} />
       </button>
       <div

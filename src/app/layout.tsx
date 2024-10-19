@@ -1,6 +1,9 @@
 import "./globals.css";
+
 import type { Metadata } from "next";
-import NavBar from "../components/nav";
+import { ThemeProvider } from "next-themes";
+
+import NavBar from "@/components/nav";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -13,10 +16,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={"antialiased"}>
-        <NavBar />
-        {children}
+        <ThemeProvider attribute="class">
+          <NavBar />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

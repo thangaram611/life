@@ -15,7 +15,7 @@ const navItems = [
 
 export default function NavLinks({ toggle }: { toggle: VoidFunction }) {
   return (
-    <ul className="sm:absolute sm:inset-x-0 text-3xl sm:text-xl sm:flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
+    <ul className="p-2 sm:mr-4 sm:inset-x-0 text-3xl sm:text-xl sm:flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
       {navItems.map((item, idx) => (
         <li
           key={idx}

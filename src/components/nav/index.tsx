@@ -13,11 +13,13 @@ export default function NavBar() {
 
   return (
     <>
-      <div className="hidden sticky top-0 py-6 sm:flex flex-col justify-center">
-        <LogoLink />
-        <NavLinks toggle={handleDrawerToggle} />
+      <div className="hidden sticky top-0 sm:flex flex-col items-center">
+        <div className="relative w-full flex justify-between">
+          <LogoLink />
+          <NavLinks toggle={handleDrawerToggle} />
+        </div>
       </div>
-      <div className="sm:hidden sticky top-0 flex flex-row my-4">
+      <div className="sm:hidden sticky top-0 flex flex-row justify-between items-center my-4 relative">
         <LogoLink />
         <MobileDrawer isOpen={isDrawerOpen} toggleOpen={handleDrawerToggle} />
       </div>

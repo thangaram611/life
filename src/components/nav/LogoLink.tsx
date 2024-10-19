@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function LogoLink() {
   return (
-    <div className="text-center z-10 size-24">
+    <div className="flex justify-center items-center z-10 w-24 h-24">
       <Link href="/">
         <Image
           src="/img/logo.png"
@@ -13,7 +13,7 @@ export default function LogoLink() {
           height={75}
           alt="logo"
           priority={true}
-          style={{ width: "100%", height: "auto" }}
+          className="w-full h-auto"
         />
       </Link>
     </div>
