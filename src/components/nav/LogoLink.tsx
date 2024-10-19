@@ -5,12 +5,12 @@ import Link from "next/link";
 
 export default function LogoLink() {
   return (
-    <div className="flex justify-center items-center z-10 w-24 h-24">
+    <div className="flex justify-center items-center w-[5rem] h-[5rem]">
       <Link href="/">
         <Image
           src="/img/logo.png"
-          width={75}
-          height={75}
+          width={50}
+          height={50}
           alt="logo"
           priority={true}
           className="w-full h-auto"

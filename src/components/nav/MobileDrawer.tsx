@@ -31,11 +31,11 @@ export default function MobileDrawer({
         <FontAwesomeIcon className="text-4xl" icon={faBars} />
       </button>
       <div
-        className={`fixed flex flex-col justify-between items-center z-10 top-0 right-0 h-full w-full bg-white text-black transition-transform duration-300 transform ${
+        className={`fixed top-0 right-0 h-screen w-screen bg-white text-black transition-transform duration-300 transform z-50 ${
           isOpen ? "translate-y-0" : "-translate-y-full"
         }`}
       >
-        <div className="flex flex-col w-full items-center">
+        <div className="flex flex-col w-full h-full items-center">
           <button className="self-end p-3 m-4" onClick={toggleOpen}>
             <FontAwesomeIcon className="text-5xl" icon={faXmark} />
           </button>

@@ -12,17 +12,17 @@ export default function NavBar() {
   }, [isDrawerOpen]);
 
   return (
-    <>
-      <div className="hidden sticky top-0 sm:flex flex-col items-center">
-        <div className="relative w-full flex justify-between">
+    <div className="sticky top-0 z-10 border-b-[0.1px] w-full">
+      <div className="backdrop-blur">
+        <div className="hidden sm:flex justify-between items-center">
           <LogoLink />
           <NavLinks toggle={handleDrawerToggle} />
         </div>
+        <div className="sm:hidden flex justify-between items-center">
+          <LogoLink />
+          <MobileDrawer isOpen={isDrawerOpen} toggleOpen={handleDrawerToggle} />
+        </div>
       </div>
-      <div className="sm:hidden sticky top-0 flex flex-row justify-between items-center my-4 relative">
-        <LogoLink />
-        <MobileDrawer isOpen={isDrawerOpen} toggleOpen={handleDrawerToggle} />
-      </div>
-    </>
+    </div>
   );
 }
